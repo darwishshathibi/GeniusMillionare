@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27291458-548e-4483-bccd-b97f68a4e8e0" name="Changes" comment="ubah sikit jaa">
+    <list default="true" id="27291458-548e-4483-bccd-b97f68a4e8e0" name="Changes" comment="niceee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -77,7 +77,8 @@
       <workItem from="1671093473177" duration="37000" />
       <workItem from="1671095169006" duration="9000" />
       <workItem from="1671106642947" duration="1674000" />
-      <workItem from="1671119010340" duration="8183000" />
+      <workItem from="1671119010340" duration="8586000" />
+      <workItem from="1671178530376" duration="4164000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1670897833733</created>
@@ -107,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671041968895</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ubah sikit jaa">
+      <created>1671132342605</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671132342605</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ubah sikit jaa">
+      <created>1671132522308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671132522308</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +143,18 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="seken komit" />
     <MESSAGE value="seken komit trerg" />
+    <MESSAGE value="the answer is not display......idk what happen..dont hv any idea..sad!!!" />
     <MESSAGE value="ubah sikit jaa" />
     <option name="LAST_COMMIT_MESSAGE" value="ubah sikit jaa" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

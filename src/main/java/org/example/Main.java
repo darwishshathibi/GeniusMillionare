@@ -8,11 +8,11 @@ public class Main {
     static String[] level1q1 = {"Direction only","Magnitude only","Magnitude or direction","Magnitude and direction"};
     static String[] level1q2 = {"dilation of arterioles near the surface of the skin","erector muscles contract, causing hairs to stand up","rapid contractions of skeletal muscles","sweat glands release less sweat"};
     static String[] level1q3 = {"Carbon dioxide","Sulphur dioxide","Calcium chloride","Hydrogen chloride"};*/
-    static ArrayList<String> firstquestion= new ArrayList<>();
-    static ArrayList<String> ans_phy_lvl1_q1 = new ArrayList<>();
-    static ArrayList<String> ans_bio_lvl1_q2 = new ArrayList<>();
-    static ArrayList<String> ans_chem_lvl1_q3 = new ArrayList<>();
-    static ArrayList<String> mcqchoices = new ArrayList<>();
+    static ArrayList<String> firstquestion= new ArrayList<String>();
+    static ArrayList<String> ans_phy_lvl1_q1 = new ArrayList<String>();
+    static ArrayList<String> ans_bio_lvl1_q2 = new ArrayList<String>();
+    static ArrayList<String> ans_chem_lvl1_q3 = new ArrayList<String>();
+    static ArrayList<String> mcqchoices = new ArrayList<String>();
     public static void main(String[] args){
         GameBegins();
     }
@@ -77,18 +77,24 @@ public class Main {
 
     static void DisplayQues(ArrayList<String> question){ // list of questions of question 1
         int turn;
-        if (question.get(0) == "A vector quantity has:"){
-            System.out.println("\n"+firstquestion.get(0));
+        ArrayList<String> mcq = McqChoices();
+        if (question.get(0).equals("A vector quantity has:")){
+            System.out.println("\n"+question.get(0));
             turn = 1;
-            DisplayAnswer(turn);
-        } else if (question.get(0) == "Which substance consists of ion?") {
-            System.out.println("\n"+firstquestion.get(1));
+            ArrayList<String> ans =anslvl1q1();
+            DisplayAnswer(turn,ans,mcq);
+
+        } else if (question.get(0).equals("Which substance consists of ion?")) {
+            System.out.println("\n"+question.get(0));
             turn = 2;
-            DisplayAnswer(turn);
-        } else if (question.get(0) == "Correctly describes how an endotherm would respond to an increase in temperature?"){
-            System.out.println("\n"+firstquestion.get(2));
+            ArrayList<String> ans =anslvl1q2();
+            DisplayAnswer(turn, ans,mcq);
+
+        } else if (question.get(0).equals("Correctly describes how an endotherm would respond to an increase in temperature?")){
+            System.out.println("\n"+question.get(0) );
             turn = 3;
-            DisplayAnswer(turn);
+            ArrayList<String> ans =anslvl1q3();
+            DisplayAnswer(turn,ans,mcq);
         }
 
         /*Scanner input = new Scanner(System.in);
@@ -125,22 +131,22 @@ public class Main {
         String inputanswer = input.nextLine();*/
     }
 
-    static void DisplayAnswer(int line){
+    static void DisplayAnswer(int line, ArrayList<String> ans1, ArrayList<String> mcq){
         if (line == 1){
-            for (int i = 0; i < mcqchoices.size(); i++) {
-                System.out.println("\t\t"+mcqchoices.get(i)+" "+anslvl1q1().get(i));
-                CheckAnswer();
+            for (int i = 0; i < 4; i++) {
+                System.out.println("\t\t"+mcq.get(i)+" "+ans1.get(i));
             }
+            CheckAnswer();
         } else if (line == 2) {
-            for (int j = 0; j < mcqchoices.size(); j++) {
-                System.out.println("\t\t"+mcqchoices.get(j)+" "+anslvl1q2().get(j));
-                CheckAnswer();
+            for (int j = 0; j < 4; j++) {
+                System.out.println("\t\t"+mcq.get(j)+" "+ans1.get(j));
             }
+            CheckAnswer();
         }  else if (line == 3){
-            for (int c = 0; c < mcqchoices.size(); c++) {
-                System.out.println("\t\t"+mcqchoices.get(c)+" "+anslvl1q3().get(c));
-                CheckAnswer();
+            for (int c = 0; c < 4; c++) {
+                System.out.println("\t\t"+mcq.get(c)+" "+ans1.get(c));
             }
+            CheckAnswer();
         }
 /*        switch (turn){
             case 1: for (int i = 0; i < mcqchoices.size(); i++) {
@@ -162,7 +168,7 @@ public class Main {
         ans_phy_lvl1_q1.add("Magnitude or direction");
         ans_phy_lvl1_q1.add("Magnitude only");
         ans_phy_lvl1_q1.add("Direction only");
-        Collections.shuffle(ans_phy_lvl1_q1);
+        Collections.shuffle(ans_phy_lvl1_q1); //shuffle the question
         return ans_phy_lvl1_q1;
     }
 
@@ -171,7 +177,7 @@ public class Main {
         ans_bio_lvl1_q2.add("Sulphur dioxide");
         ans_bio_lvl1_q2.add("Calcium chloride");
         ans_bio_lvl1_q2.add("Hydrogen chloride");
-        Collections.shuffle(ans_bio_lvl1_q2);
+        Collections.shuffle(ans_bio_lvl1_q2); //shuffle the question
         return ans_bio_lvl1_q2;
     }
 
@@ -180,7 +186,7 @@ public class Main {
         ans_chem_lvl1_q3.add("erector muscles contract, causing hairs to stand up");
         ans_chem_lvl1_q3.add("rapid contractions of skeletal muscles");
         ans_chem_lvl1_q3.add("sweat glands release less sweat");
-        Collections.shuffle(ans_chem_lvl1_q3);
+        Collections.shuffle(ans_chem_lvl1_q3); //shuffle the question
         return ans_chem_lvl1_q3;
     }
 
@@ -189,11 +195,12 @@ public class Main {
 
 
     }
-    static void McqChoices(){
+    static ArrayList<String> McqChoices(){
         mcqchoices.add("A");
         mcqchoices.add("B");
         mcqchoices.add("C");
         mcqchoices.add("D");
+        return mcqchoices;
     }
 
 }

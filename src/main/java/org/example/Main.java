@@ -24,7 +24,7 @@ public class Main {
     static ArrayList<String> ans_bio_lvl5_q2 =  new ArrayList<>();
     static ArrayList<String> ans_chem_lvl5_q3 =  new ArrayList<>();
     static ArrayList<String> mcqchoices = new ArrayList<String>();
-    static boolean check =  true;
+    static boolean check = true;
     static String name;
     public static void main(String[] args){
         GameBegins();
@@ -75,22 +75,21 @@ public class Main {
                     QueFour();
                 } else if (i == 5) {
                     QueFive();
-
                 }
             }
             if (!check){
-                System.out.println("\nYOU FUCKING FAILED, YOU DAMN SHIT MADAFAKA!!! "+name);
+                System.out.println("\n"+name+". You just failed.");
                 break;
-            }
+            }else
+                StopGame();
         }
-        StopGame();
     }
 
     static void QuesOne(){
         firstquestion.add("A vector quantity has:");
         firstquestion.add("Which substance consists of ion?");
         firstquestion.add("Correctly describes how an endotherm would respond to an increase in temperature?");
-        Collections.shuffle(firstquestion);
+        //Collections.shuffle(firstquestion);
         DisplayQues(firstquestion);
     }
     static void QueTwo(){
@@ -125,92 +124,92 @@ public class Main {
         int turn;
         ArrayList<String> mcq = McqChoices();
         if (question.get(0).equals("A vector quantity has:")){
-            System.out.println("\n"+question.get(0)); // display phy question 1
+            System.out.println("\n 1. "+question.get(0)); // display phy question 1
             turn = 1;
             ArrayList<String> ans =anslvl1q1();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("Which substance consists of ion?")) {
-            System.out.println("\n"+question.get(0)); // display bio question 1
+            System.out.println("\n 1. "+question.get(0)); // display bio question 1
             turn = 2;
             ArrayList<String> ans =anslvl1q2();
             DisplayAnswer(turn, ans,mcq);
 
         } else if (question.get(0).equals("Correctly describes how an endotherm would respond to an increase in temperature?")){
-            System.out.println("\n"+question.get(0) ); //display chem question 1
+            System.out.println("\n 1. "+question.get(0) ); //display chem question 1
             turn = 3;
             ArrayList<String> ans =anslvl1q3();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("What is the meaning of 800 W?")) {
-            System.out.println("\n"+question.get(0) ); //display phy question 2
+            System.out.println("\n 2. "+question.get(0) ); //display phy question 2
             turn = 4;
             ArrayList<String> ans =anslvl2q1();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("Which of the following, A to D, is a similarity in the way ATP is made in respiration and photosynthesis?")) {
-            System.out.println("\n"+question.get(0) ); //display bio question 2
+            System.out.println("\n 2. "+question.get(0) ); //display bio question 2
             turn = 5;
             ArrayList<String> ans =anslvl2q2();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("Which of the following has the lowest rate of reaction?")) {
-            System.out.println("\n"+question.get(0) ); //display chem question 2
+            System.out.println("\n 2. "+question.get(0) ); //display chem question 2
             turn = 6;
             ArrayList<String> ans =anslvl2q3();
             DisplayAnswer(turn,ans,mcq);
             
         } else if (question.get(0).equals("Doped with pentavalent atom")) {
-            System.out.println("\n"+question.get(0) ); //display phy question 3
+            System.out.println("\n 3. "+question.get(0) ); //display phy question 3
             turn = 7;
             ArrayList<String> ans =anslvl3q1();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("The hormone insulin being removed from the blood by the glomerulus.")) {
-            System.out.println("\n"+question.get(0) ); //display bio question 3
+            System.out.println("\n 3. "+question.get(0) ); //display bio question 3
             turn = 8;
             ArrayList<String> ans =anslvl3q2();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("Bromine molecule gains electron")) {
-            System.out.println("\n"+question.get(0) ); //display chem question 3
+            System.out.println("\n 3. "+question.get(0) ); //display chem question 3
             turn = 9;
             ArrayList<String> ans =anslvl3q3();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("Carbon - 14")) {
-            System.out.println("\n"+question.get(0) ); //display phy question 4
+            System.out.println("\n 4. "+question.get(0) ); //display phy question 4
             turn = 10;
             ArrayList<String> ans =anslvl4q1();
             DisplayAnswer(turn,ans,mcq);
             
         } else if (question.get(0).equals("roots grow downward")) {
-            System.out.println("\n"+question.get(0) ); //display bio question 4
+            System.out.println("\n 4. "+question.get(0) ); //display bio question 4
             turn = 11;
             ArrayList<String> ans =anslvl4q2();
             DisplayAnswer(turn,ans,mcq);
             
         } else if (question.get(0).equals("Soda lime glass")) {
-            System.out.println("\n"+question.get(0) ); //display chem question 4
+            System.out.println("\n 4. "+question.get(0) ); //display chem question 4
             turn = 12;
             ArrayList<String> ans =anslvl4q3();
             DisplayAnswer(turn,ans,mcq);
             
         } else if (question.get(0).equals("3.5 MW")) {
-            System.out.println("\n"+question.get(0) ); //display phy question 5
-            turn = 12;
+            System.out.println("\n 5. "+question.get(0) ); //display phy question 5
+            turn = 13;
             ArrayList<String> ans =anslvl5q1();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("hCG has a molecular mass of less than 69,000")) {
-            System.out.println("\n"+question.get(0) ); //display bio question 5
-            turn = 12;
+            System.out.println("\n 5. "+question.get(0) ); //display bio question 5
+            turn = 14;
             ArrayList<String> ans =anslvl5q2();
             DisplayAnswer(turn,ans,mcq);
 
         } else if (question.get(0).equals("+7")) {
-            System.out.println("\n"+question.get(0) ); //display chem question 5
-            turn = 12;
+            System.out.println("\n 5. "+question.get(0) ); //display chem question 5
+            turn = 15;
             ArrayList<String> ans =anslvl5q3();
             DisplayAnswer(turn,ans,mcq);
         }
@@ -218,16 +217,19 @@ public class Main {
 
     static void DisplayAnswer(int line, ArrayList<String> ans, ArrayList<String> mcq){
         if (line == 1){
+            String correct_ans = "Magnitude and direction";
             for (int i = 0; i < 4; i++) { // display ans phy question 1
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
+                System.out.println(ans.get(i).equals(correct_ans));
             }
             String jawapan = InputAnswer();
-            String correct_ans = "Magnitude and direction";
             check=CheckAnswer(jawapan, ans, mcq,correct_ans);
-            //System.out.println(check);
+            System.out.println(check);
 
 
-        } else if (line == 2) {
+        }
+
+        else if (line == 2) {
             for (int j = 0; j < 4; j++) { // display ans bio question 1
                 System.out.println("\t\t"+mcq.get(j)+" "+ans.get(j));
             }
@@ -483,11 +485,14 @@ public class Main {
         for (int i = 0; i < 4; i++) {
             if (ans_question.get(i).contains(correct_ans)){
                 //System.out.println(ans_question.get(i).contains(correct_ans));
+                //System.out.println(check);
                 correct_choices = mcq.get(i);
                 //System.out.println(correct_choices);
-                return ans_question.get(i).contains(correct_ans);
             }
         }
+        if(input_ans.equals(correct_choices)){
+            return true;
+        } else
         return false;
     }
     static ArrayList<String> McqChoices(){

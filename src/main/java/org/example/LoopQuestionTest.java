@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class LoopQuestionTest {
     static Scanner input = new Scanner(System.in);
+    static boolean yess;
     public static void main(String[] args) {
         boolean check = true;
         for (int i = 1; i <= 5; i++) {
@@ -14,30 +15,29 @@ public class LoopQuestionTest {
             System.out.println("you failed");
     }
     static boolean rounq(int i){
-        boolean yes;
         if (i == 1){
-            yes=q1();
-            if (yes)
+            yess =q1();
+            if (yess)
                 return true;
         }
         if (i == 2){
-            yes=q2();
-            if (yes)
+            yess =q2();
+            if (yess)
                 return true;
         }
         if (i == 3){
-            yes=q3();
-            if (yes)
+            yess =q3();
+            if (yess)
                 return true;
         }
         if (i == 4){
-            yes=q4();
-            if (yes)
+            yess =q4();
+            if (yess)
                 return true;
         }
         if (i == 5){
-            yes=q5();
-            if (yes)
+            yess =q5();
+            if (yess)
                 return true;
         }
         return false;

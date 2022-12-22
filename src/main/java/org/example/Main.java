@@ -3,10 +3,10 @@ import java.util.Scanner;
 import java.util.Collections;
 import java.util.ArrayList;
 public class Main {
-    static ArrayList<String> firstquestion= new ArrayList<String>();
-    static ArrayList<String> ans_phy_lvl1_q1 = new ArrayList<String>();
-    static ArrayList<String> ans_bio_lvl1_q2 = new ArrayList<String>();
-    static ArrayList<String> ans_chem_lvl1_q3 = new ArrayList<String>();
+    static ArrayList<String> firstquestion= new ArrayList<>();
+    static ArrayList<String> ans_phy_lvl1_q1 = new ArrayList<>();
+    static ArrayList<String> ans_bio_lvl1_q2 = new ArrayList<>();
+    static ArrayList<String> ans_chem_lvl1_q3 = new ArrayList<>();
     static ArrayList<String> secondquestion = new ArrayList<>();
     static ArrayList<String> ans_phy_lvl2_q1 = new ArrayList<>();
     static ArrayList<String> ans_bio_lvl2_q2 = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Main {
     static ArrayList<String> ans_phy_lvl5_q1 =  new ArrayList<>();
     static ArrayList<String> ans_bio_lvl5_q2 =  new ArrayList<>();
     static ArrayList<String> ans_chem_lvl5_q3 =  new ArrayList<>();
-    static ArrayList<String> mcqchoices = new ArrayList<String>();
+    static ArrayList<String> mcqchoices = new ArrayList<>();
     static boolean check = true;
     static String name;
     public static void main(String[] args){
@@ -36,9 +36,9 @@ public class Main {
         System.out.println("ARE YOU A GENIUS?\n");
         System.out.println("This game consists of 5 questions.");
         System.out.println("Which every questions have different level, which are:\n");
-        for (int i = 0; i < rank.length; i++) {
+        for (String s : rank) {
             k++;
-            System.out.println("\t"+k+". "+rank[i]);
+            System.out.println("\t" + k + ". " + s);
         }
         System.out.println("\nThere are 3 subjects which are Physics, Chemistry, Biology and will shuffle among them.");
         System.out.println("If your answer is correct, the difficulty will increased.");
@@ -49,15 +49,14 @@ public class Main {
 
     static void GameBegins(){
         GameRules();
-        String inputname = StudentName();
+        StudentName();
         Questions();
     }
 
-    static String StudentName(){
+    static void StudentName(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your nickname: ");
         name = input.nextLine();
-        return name;
     }
 
     static void Questions(){ //try boolean on Questions();
@@ -73,7 +72,7 @@ public class Main {
                     QueThree();
                 } else if (i == 4) {
                     QueFour();
-                } else if (i == 5) {
+                } else {
                     QueFive();
                 }
             }
@@ -89,7 +88,7 @@ public class Main {
         firstquestion.add("A vector quantity has:");
         firstquestion.add("Which substance consists of ion?");
         firstquestion.add("Correctly describes how an endotherm would respond to an increase in temperature?");
-        //Collections.shuffle(firstquestion);
+        Collections.shuffle(firstquestion);
         DisplayQues(firstquestion);
     }
     static void QueTwo(){
@@ -220,23 +219,21 @@ public class Main {
             String correct_ans = "Magnitude and direction";
             for (int i = 0; i < 4; i++) { // display ans phy question 1
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).equals(correct_ans));
+                //System.out.println(ans.get(i).equals(correct_ans));
             }
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan, ans, mcq,correct_ans);
             System.out.println(check);
-
-
         }
 
         else if (line == 2) {
-            for (int j = 0; j < 4; j++) { // display ans bio question 1
+            String correct_ans = "Calcium chloride";
+            for (int j = 0; j < 4; j++) {  // display ans bio question 1
                 System.out.println("\t\t"+mcq.get(j)+" "+ans.get(j));
             }
-            String correct_ans = "Calcium chloride";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
-            //System.out.println(check);
+            System.out.println(check);
 
         }  else if (line == 3){
             for (int c = 0; c < 4; c++) { // display ans chem question 1
@@ -245,7 +242,7 @@ public class Main {
             String correct_ans = "dilation of arterioles near the surface of the skin";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
-            //System.out.println(check);
+            System.out.println(check);
 
         } else if (line == 4) {
             for (int i = 0; i < 4; i++) { // dsiplay ans phy question 2
@@ -254,7 +251,7 @@ public class Main {
             String correct_ans = "The rate of change of energy is 800 joules";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
-
+            System.out.println(check);
 
         } else if (line == 5 ) {
             for (int i = 0; i < 4; i++) { // dsiplay ans bio question 2
@@ -263,7 +260,7 @@ public class Main {
             String correct_ans = "both involve proton gradients";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
-
+            System.out.println(check);
 
         } else if (line == 6) {
             for (int i = 0; i < 4; i++) { // dsiplay ans chem question 2
@@ -272,6 +269,7 @@ public class Main {
             String correct_ans = "Fermentation of glucose";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 7) {
             for (int i = 0; i < 4; i++) { // dsiplay ans phy question 3
@@ -280,6 +278,7 @@ public class Main {
             String correct_ans = "Doped with pentavalent atom";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 8) {
             for (int i = 0; i < 4; i++) { // dsiplay ans bio question 3
@@ -288,6 +287,7 @@ public class Main {
             String correct_ans = "The hormone insulin being removed from the blood by the glomerulus.";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 9) {
             for (int i = 0; i < 4; i++) { // dsiplay ans chem question 3
@@ -296,6 +296,7 @@ public class Main {
             String correct_ans = "Bromine molecule gains electron";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 10) {
             for (int i = 0; i < 4; i++) { // dsiplay ans phy question 4
@@ -304,6 +305,7 @@ public class Main {
             String correct_ans = "Carbon - 14";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 11) {
             for (int i = 0; i < 4; i++) { // dsiplay ans bio question 4
@@ -312,6 +314,7 @@ public class Main {
             String correct_ans = "roots grow downwards";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 12) {
             for (int i = 0; i < 4; i++) { // dsiplay ans chem question 4
@@ -320,6 +323,7 @@ public class Main {
             String correct_ans = "Soda lime glass";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 13) {
             for (int i = 0; i < 4; i++) { // dsiplay ans phy question 5
@@ -328,6 +332,7 @@ public class Main {
             String correct_ans = "3.5 MW";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 14) {
             for (int i = 0; i < 4; i++) { // dsiplay ans bio question 5
@@ -336,6 +341,7 @@ public class Main {
             String correct_ans = "hCG has a molecular mass of less than 69,000";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         } else if (line == 15) {
             for (int i = 0; i < 4; i++) { // dsiplay ans chem question 5
@@ -344,6 +350,7 @@ public class Main {
             String correct_ans = "+7";
             String jawapan = InputAnswer();
             check=CheckAnswer(jawapan,ans, mcq, correct_ans);
+            System.out.println(check);
 
         }
     }
@@ -476,8 +483,7 @@ public class Main {
     static String InputAnswer(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your answer: ");
-        String ans = input.next();
-        return ans;
+        return input.next();
     }
 
     static boolean CheckAnswer(String input_ans, ArrayList<String> ans_question, ArrayList<String> mcq, String correct_ans){// this method check the answer correct or wrong
@@ -493,7 +499,7 @@ public class Main {
         if(input_ans.equals(correct_choices)){
             return true;
         } else
-        return false;
+            return false;
     }
     static ArrayList<String> McqChoices(){
         mcqchoices.add("A");

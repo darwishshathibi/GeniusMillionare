@@ -494,7 +494,6 @@ public class NewGeniusQuiz {
         Collections.shuffle(anschemq5);
         return anschemq5;
     }
-
     static ArrayList<String> mcqchoices(){
         mcq.add("A");
         mcq.add("B");

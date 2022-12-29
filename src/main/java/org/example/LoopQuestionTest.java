@@ -1,4 +1,5 @@
 package org.example;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LoopQuestionTest {
@@ -7,7 +8,9 @@ public class LoopQuestionTest {
     public static void main(String[] args) {
         boolean check = true;
         for (int i = 1; i <= 5; i++) {
+            System.out.println("123  "+check);
             check=rounq(i);
+            System.out.println(check);
             if (!check)
                 break;
         }
@@ -43,35 +46,35 @@ public class LoopQuestionTest {
         return false;
     }
     static boolean q1(){
-        System.out.println("1. enter: ");
+        System.out.print("1. enter: ");// display question
         int num = input.nextInt();
         if (num == 1)  //this part will go to special method to check the answer true or not, will return boolean
             return true;
         return false;
     }
     static boolean q2(){
-        System.out.println("2. enter: ");
+        System.out.print("2. enter: ");
         int num = input.nextInt();
         if (num == 1)
             return true;
         return false;
     }
     static boolean q3(){
-        System.out.println("3.enter: ");
+        System.out.print("3. enter: ");
         int num = input.nextInt();
         if (num == 1)
             return true;
         return false;
     }
     static boolean q4(){
-        System.out.println("4. enter: ");
+        System.out.print("4. enter: ");
         int num = input.nextInt();
         if (num == 1)
             return true;
         return false;
     }
     static boolean q5(){
-        System.out.println("5. enter: ");
+        System.out.print("5. enter: ");
         int num = input.nextInt();
         if (num == 1){
             end();
@@ -83,4 +86,5 @@ public class LoopQuestionTest {
         System.out.println("genius");
 
     }
+
 }

@@ -34,8 +34,9 @@ public class NewGeniusQuiz {
         System.out.println();
         boolean check = validate;
         for (int i = 1; i <= 5; i++) {
+            System.out.println("\nQuestion "+i);
             check = displayquestion(i);
-            System.out.println("123 "+check);
+            //System.out.println("123 "+check);
             if (!check)
                 break;
         }
@@ -49,43 +50,56 @@ public class NewGeniusQuiz {
         System.out.println("This question consist of 3 subjects which was Physics, Biology and Chemistry");
         System.out.println("There will be 5 questions, if you answer all questions without any failure, you will gain title 'GENIUS'.\n");
     }
-    static String studentname(){
+    static void studentname(){ //student name
         System.out.print("Enter your name: ");
         name = input.nextLine();
-        return name;
     }
     static boolean displayquestion(int turn){
         boolean check = validate;
         switch (turn){
             case 1:
-                check = q1();
-                if (check){
-                    //System.out.println("456 "+check);
-                    return true;
-                }break;
+                if (q1())
+                    return true; break;
             case 2:
-                check = q2();
-                if (check)
+                if (q2())
                     return true; break;
             case 3:
-                check = q3();
-                if (check)
+                if (q3())
                     return true; break;
             case 4:
-                check = q4();
-                if (check)
+                if (q4())
                     return true; break;
             case 5:
-                check = q5();
-                if (check)
+                if (q5())
                     return true; break;
         }
         return false;
+//        if(turn == 1){
+//            if (q1())
+//                return true;
+//        }
+//        if(turn == 2){
+//            if (q2())
+//                return true;
+//        }
+//        if(turn == 3){
+//            if (q3())
+//                return true;
+//        }
+//        if(turn == 4){
+//            if (q4())
+//                return true;
+//        }
+//        if(turn == 5){
+//            if (q5())
+//                return true;
+//        }
+//        return false;
     }
-    static boolean q1(){ //later change to boolean
+    static boolean q1(){
         ArrayList<String> ques = questioncollectionq1();
         displayquestion(ques);
-        System.out.println(validate);
+        //System.out.println(validate);
         return validate;
     }
     static boolean q2(){
@@ -146,63 +160,63 @@ public class NewGeniusQuiz {
     static void displayquestion(ArrayList<String> question){
         int turn;
         if(question.get(0).equals("A vector quantity has")){
-            System.out.println("1. "+question.get(0));
+            System.out.println(question.get(0));
             turn = 1;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which substance consists of ion?")) {
-            System.out.println("1. "+question.get(0));
+        } if (question.get(0).equals("Which substance consists of ion?")) {
+            System.out.println(question.get(0));
             turn = 2;
             displayanswer(turn);
-        } else if (question.get(0).equals("Correctly describes how an endotherm would respond to an increase in temperature?")) {
-            System.out.println("1. "+question.get(0));
+        } if (question.get(0).equals("Correctly describes how an endotherm would respond to an increase in temperature?")) {
+            System.out.println(question.get(0));
             turn = 3;
             displayanswer(turn);
-        } else if (question.get(0).equals("What is the meaning of 800 W?")) {
-            System.out.println("2. "+question.get(0));
+        } if (question.get(0).equals("What is the meaning of 800 W?")) {
+            System.out.println(question.get(0));
             turn = 4;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which of the following, A to D, is a similarity in the way ATP is made in respiration and photosynthesis?")) {
-            System.out.println("2. "+question.get(0));
+        } if (question.get(0).equals("Which of the following, A to D, is a similarity in the way ATP is made in respiration and photosynthesis?")) {
+            System.out.println(question.get(0));
             turn = 5;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which of the following has the lowest rate of reaction?")) {
-            System.out.println("2. "+question.get(0));
+        } if (question.get(0).equals("Which of the following has the lowest rate of reaction?")) {
+            System.out.println(question.get(0));
             turn = 6;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which statement is correct about n-type semiconductor?")) {
-            System.out.println("3. "+question.get(0));
+        } if (question.get(0).equals("Which statement is correct about n-type semiconductor?")) {
+            System.out.println(question.get(0));
             turn = 7;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which of the following, A to D, is not an example of cell signalling?")) {
-            System.out.println("3. "+question.get(0));
+        } if (question.get(0).equals("Which of the following, A to D, is not an example of cell signalling?")) {
+            System.out.println(question.get(0));
             turn = 8;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which of the following is a reduction reaction:")) {
-            System.out.println("3. "+question.get(0));
+        } if (question.get(0).equals("Which of the following is a reduction reaction:")) {
+            System.out.println(question.get(0));
             turn = 9;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which radioactive can be used to determine the age of the fossil?")) {
-            System.out.println("4. "+question.get(0));
+        } if (question.get(0).equals("Which radioactive can be used to determine the age of the fossil?")) {
+            System.out.println(question.get(0));
             turn = 10;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which of the following statements, A to D, is evidence for geotropism?")) {
-            System.out.println("4. "+question.get(0));
+        } if (question.get(0).equals("Which of the following statements, A to D, is evidence for geotropism?")) {
+            System.out.println(question.get(0));
             turn = 11;
             displayanswer(turn);
-        } else if (question.get(0).equals("What type of glass is formed when calcium")) {
-            System.out.println("4. "+question.get(0));
+        } if (question.get(0).equals("What type of glass is formed when calcium")) {
+            System.out.println(question.get(0));
             turn = 12;
             displayanswer(turn);
-        } else if (question.get(0).equals("Which value is equal to 3 500 000 W?")) {
-            System.out.println("5. "+question.get(0));
+        } if (question.get(0).equals("Which value is equal to 3 500 000 W?")) {
+            System.out.println(question.get(0));
             turn = 13;
             displayanswer(turn);
-        } else if (question.get(0).equals("The hormone hCG can be detected in urine using pregnancy tests.")) {
-            System.out.println("5. "+question.get(0));
+        } if (question.get(0).equals("The hormone hCG can be detected in urine using pregnancy tests.")) {
+            System.out.println(question.get(0));
             turn = 14;
             displayanswer(turn);
-        } else if (question.get(0).equals("What is the oxidation number of X in XO,?")) {
-            System.out.println("5. "+question.get(0));
+        } if (question.get(0).equals("What is the oxidation number of X in XO,?")) {
+            System.out.println(question.get(0));
             turn = 15;
             displayanswer(turn);
         }
@@ -215,13 +229,13 @@ public class NewGeniusQuiz {
             ans = ansq1phy();
             correct_ans = "Magnitude and direction";
             for (int i = 0; i < 4; i++) {
-                System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
+                System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i)); //make a n
                 System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 2) {
+            //System.out.println(validate);
+        } if (turn == 2) {
             correct_ans = "Calcium chloride";
             ans = ansq1chem();
             for (int i = 0; i < 4; i++) {
@@ -230,8 +244,8 @@ public class NewGeniusQuiz {
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        }else if (turn == 3) {
+            //System.out.println(validate);
+        }if (turn == 3) {
             ans = ansq1bio();
             correct_ans = "Dilation of arterioles near the surface of the skin";
             for (int i = 0; i < 4; i++) {
@@ -240,8 +254,8 @@ public class NewGeniusQuiz {
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 4) {
+            //System.out.println(validate);
+        } if (turn == 4) {
             correct_ans = "The rate of change of energy 800 joules.";
             ans = ansq2phy();
             for (int i = 0; i < 4; i++) {
@@ -249,7 +263,7 @@ public class NewGeniusQuiz {
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-        } else if (turn == 5) {
+        } if (turn == 5) {
             correct_ans = "both involve proton gradients";
             ans = ansq2bio();
             for (int i = 0; i < 4; i++) {
@@ -257,7 +271,7 @@ public class NewGeniusQuiz {
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-        } else if (turn == 6) {
+        } if (turn == 6) {
             correct_ans = "Fermentation of glucose";
             ans = ansq2chem();
             for (int i = 0; i < 4; i++) {
@@ -265,108 +279,109 @@ public class NewGeniusQuiz {
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-        } else if (turn == 7) {
+        } if (turn == 7) {
             correct_ans = "Doped with pentavalent atom";
             ans = ansq3phy();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 8) {
+            //System.out.println(validate);
+        } if (turn == 8) {
             correct_ans = "The hormone insulin being removed from the blood by the glomerulus.";
             ans = ansq3bio();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 9) {
+            //System.out.println(validate);
+        } if (turn == 9) {
             correct_ans = "Bromine molecule gains electron";
             ans = ansq3chem();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 10) {
+            //System.out.println(validate);
+        } if (turn == 10) {
             correct_ans = "Carbon - 14";
             ans = ansq4phy();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 11) {
+            //System.out.println(validate);
+        } if (turn == 11) {
             correct_ans = "Roots grow downwards";
             ans = ansq4bio();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 12) {
+            //System.out.println(validate);
+        } if (turn == 12) {
             correct_ans = "Soda lime glass";
             ans = ansq4chem();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 13) {
+            //System.out.println(validate);
+        } if (turn == 13) {
             correct_ans = "3.5 MW";
             ans = ansq5phy();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 14) {
+            //System.out.println(validate);
+        } if (turn == 14) {
             correct_ans = "hCG has a molecular mass of less than 69,000";
             ans = ansq5bio();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
-        } else if (turn == 15) {
+           // System.out.println(validate);
+        } if (turn == 15) {
             correct_ans = "+7";
             ans = ansq5chem();
             for (int i = 0; i < 4; i++) {
                 System.out.println("\t\t"+mcq.get(i)+" "+ans.get(i));
-                System.out.println(ans.get(i).contains(correct_ans));
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
             jawapan = inputanswer();
             validate = checkanswer(jawapan, correct_ans, ans, mcq);
-            System.out.println(validate);
+            //System.out.println(validate);
         }
     }
     static String inputanswer(){
         System.out.print("Enter answer: ");
         return input.next();
     }
-    static boolean checkanswer(String input_jawapan, String correct_ans, ArrayList<String> ans, ArrayList<String> mcq){
+    static boolean checkanswer(String input_jawapan, String correct_ans, ArrayList<String> ans, ArrayList<String> mcq){ //check the answer
         String correct_choices = null;
         for (int i = 0; i < 4; i++) {
             if (ans.get(i).contains(correct_ans)){
                 correct_choices = mcq.get(i);
-                System.out.println(correct_choices);
+                //System.out.println(correct_choices);
+                //System.out.println(ans.get(i).contains(correct_ans));
             }
         }
         if(input_jawapan.equals(correct_choices)){
@@ -502,6 +517,6 @@ public class NewGeniusQuiz {
         return mcq;
     }
     static void endquiz(){
-        System.out.println(name+" is a genuis");
+        System.out.println(name+" is a GENIUS");
     }
 }

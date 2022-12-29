@@ -493,7 +493,7 @@ public class Main {
                 //System.out.println(ans_question.get(i).contains(correct_ans));
                 //System.out.println(check);
                 correct_choices = mcq.get(i);
-                //System.out.println(correct_choices);
+                System.out.println(correct_choices);
             }
         }
         if(input_ans.equals(correct_choices)){

@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27291458-548e-4483-bccd-b97f68a4e8e0" name="Changes" comment="sbvusvbwudbvwuvbuw">
-      <change afterPath="$PROJECT_DIR$/ansq1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ansq2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ansq3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ansq4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ansq5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/answers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/question1collections.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/question2collections.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/question3collections.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/question4collections.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/question5collections.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/test.java" afterDir="false" />
+    <list default="true" id="27291458-548e-4483-bccd-b97f68a4e8e0" name="Changes" comment="sbvusvbwudbvwuvbuwsdfhj">
+      <change afterPath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/GeniusQuiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/question1collections.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/question2collections.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/question3collections.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/question4collections.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/question5collections.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/readfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/readfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LoopQuestionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LoopQuestionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewGeniusQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewGeniusQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/readfile.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/readfile.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/GeniusQuiz.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/NewProjectQuizGenius/test.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/org/example/LoopQuestionTest.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/org/example/Main.java" root0="SKIP_INSPECTION" />
@@ -111,7 +92,20 @@
       <recent name="C:\Users\User\Documents\GeniusMillionare\src\main\NewProjectGenius" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.readfile">
+  <component name="RunManager" selected="Application.GeniusQuiz">
+    <configuration name="GeniusQuiz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NewProjectQuizGenius.GeniusQuiz" />
+      <module name="GeniusMillionare" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NewProjectQuizGenius.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoopQuestionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.LoopQuestionTest" />
       <module name="GeniusMillionare" />
@@ -151,19 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="readfile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NewProjectQuizGenius.readfile" />
-      <module name="GeniusMillionare" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="NewProjectQuizGenius.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewProjectQuizGenius.test" />
       <module name="GeniusMillionare" />
@@ -179,7 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.readfile" />
+        <item itemvalue="Application.GeniusQuiz" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.NewGeniusQuiz" />
         <item itemvalue="Application.LoopQuestionTest" />
@@ -233,7 +214,15 @@
       <workItem from="1672280105480" duration="20000" />
       <workItem from="1672283687147" duration="20000" />
       <workItem from="1672283769679" duration="286000" />
-      <workItem from="1672286732850" duration="4813000" />
+      <workItem from="1672286732850" duration="5827000" />
+      <workItem from="1672299747550" duration="435000" />
+      <workItem from="1672302840311" duration="1017000" />
+      <workItem from="1672303880844" duration="464000" />
+      <workItem from="1672317332620" duration="405000" />
+      <workItem from="1672330904789" duration="323000" />
+      <workItem from="1672331238524" duration="40000" />
+      <workItem from="1672399030257" duration="446000" />
+      <workItem from="1672421008783" duration="3814000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1670897833733</created>
@@ -333,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672132605169</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sbvusvbwudbvwuvbuwsdfhj">
+      <created>1672292169549</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672292169549</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +358,8 @@
     <MESSAGE value="test question loop, done and func well" />
     <MESSAGE value="settle" />
     <MESSAGE value="sbvusvbwudbvwuvbuw" />
-    <option name="LAST_COMMIT_MESSAGE" value="sbvusvbwudbvwuvbuw" />
+    <MESSAGE value="sbvusvbwudbvwuvbuwsdfhj" />
+    <option name="LAST_COMMIT_MESSAGE" value="sbvusvbwudbvwuvbuwsdfhj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
